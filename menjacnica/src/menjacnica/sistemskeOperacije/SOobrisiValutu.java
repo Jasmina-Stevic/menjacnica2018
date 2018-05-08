@@ -10,10 +10,10 @@ public class SOobrisiValutu {
 		if (valuta==null)
 			throw new RuntimeException("Valuta ne sme biti null");
 		
-		if (kursnaLista.contains(valuta))
-			throw new RuntimeException("Valuta je vec uneta u kursnu listu");
+		if (!kursnaLista.contains(valuta))
+			throw new RuntimeException("Valuta se ne nalazi u kursnoj listi");
 		
-		kursnaLista.add(valuta);		
+		kursnaLista.remove(valuta);		
 	}	
 	
 }
